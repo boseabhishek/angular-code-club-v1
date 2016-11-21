@@ -7,15 +7,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Materialize CSS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css" media="screen,projection">
 
     <title>Barebones Materialize</title>
   </head>
   <body>
-    <h1>Hello, Materialize!</h1>
+
+    <!-- Navigation bar -->
+    <nav class="indigo" role="navigation">
+      <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">NDC Movie Store</a>
+
+        <!-- Desktop links -->
+        <ul class="right hide-on-med-and-down">
+          <li><a href="#">Movies</a></li>
+          <li><a href="#">Basket</a></li>
+        </ul>
+
+        <!-- Mobile links -->
+        <ul id="nav-mobile" class="side-nav">
+          <li><a href="#">Movies</a></li>
+          <li><a href="#">Basket</a></li>
+        </ul>
+        <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+      </div>
+    </nav>
+
+    <h1>Hello World</h1>
 
     <!-- Materialize JavaScript -->
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+    <script src="js/init.js"></script>
   </body>
 </html>
