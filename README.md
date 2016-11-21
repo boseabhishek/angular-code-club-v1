@@ -1,1 +1,5 @@
-# angular-code-club-v1
+# AngularJS Code Club
+
+## Slides 
+http://slides.com/adamkelly/deck#/
+
