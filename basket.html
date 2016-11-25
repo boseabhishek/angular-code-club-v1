@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Regular meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Materialize CSS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css" media="screen,projection">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>NDC Movie Store - Basket</title>
+  </head>
+  <body>
+
+    <!-- Navigation bar -->
+    <nav class="indigo" role="navigation">
+      <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">NDC Movie Store</a>
+
+        <!-- Desktop links -->
+        <ul class="right hide-on-med-and-down">
+          <li><a class="waves-effect" href="#">Movies</a></li>
+          <li><a class="waves-effect" href="#">Basket</a></li>
+        </ul>
+
+        <!-- Mobile links -->
+        <ul id="nav-mobile" class="side-nav">
+          <li><a class="waves-effect" href="#">Movies</a></li>
+          <li><a class="waves-effect" href="#">Basket</a></li>
+        </ul>
+        <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+      </div>
+    </nav>
+
+    <!-- Page title -->
+    <div class="section no-pad-bot" id="index-banner">
+      <div class="container">
+        <h1 class="header center indigo-text">Basket</h1>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <!-- Basket table -->
+      <table>
+
+        <thead>
+          <tr>
+            <th data-field="movie">Movie</th>
+            <th data-field="price">Price</th>
+            <th data-field="remove" class="remove"></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Movie Title 1</td>
+            <td>£5.99</td>
+            <td>
+              <a class="waves-effect waves-light btn light-blue">Remove</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Movie Title 2</td>
+            <td>£7.55</td>
+             <td>
+              <a class="waves-effect waves-light btn light-blue">Remove</a>
+            </td>
+          </tr>
+          <tr class="total">
+            <td>Total</td>
+            <td>£13.54</td>
+            <td></td>
+          </tr>
+        </tbody>
+
+      </table>
+
+    </div>
+
+    <!-- Materialize JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+    <script src="js/init.js"></script>
+  </body>
+</html>
