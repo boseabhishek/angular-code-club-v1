@@ -11,9 +11,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css" media="screen,projection">
     <link rel="stylesheet" href="css/style.css">
 
-    <title>NDC Movie Store - Basket</title>
+    <title>NDC Movie Store - Movies</title>
   </head>
-  <body>
+  <body ng-app="movieapp">
 
     <!-- Navigation bar -->
     <nav class="indigo" role="navigation">
@@ -21,26 +21,31 @@
 
         <!-- Desktop links -->
         <ul class="right hide-on-med-and-down">
-          <li><a class="waves-effect" href="#">Movies</a></li>
-          <li><a class="waves-effect" href="#">Basket</a></li>
+          <li><a class="waves-effect" href="#/">Movies</a></li>
+          <li><a class="waves-effect" href="#/basket">Basket</a></li>
         </ul>
 
         <!-- Mobile links -->
         <ul id="nav-mobile" class="side-nav">
-          <li><a class="waves-effect" href="#">Movies</a></li>
-          <li><a class="waves-effect" href="#">Basket</a></li>
+          <li><a class="waves-effect" href="#/">Movies</a></li>
+          <li><a class="waves-effect" href="#/basket">Basket</a></li>
         </ul>
         <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
       </div>
     </nav>
 
-      
-
-    </div>
+    <div ng-view=""></div>
 
     <!-- Materialize JavaScript -->
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
     <script src="js/init.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-resource.min.js"></script>
+    <script src="js/angular/app.js"></script>
+    <script src="js/angular/controllers.js"></script>
+    <script src="js/angular/services.js"></script>
   </body>
 </html>
