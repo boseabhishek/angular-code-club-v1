@@ -9,34 +9,38 @@
 </div>
 <div class="container">
 <!-- Movie card -->
-  <div class="card medium sticky-action">
-    <div class="card-image waves-effect waves-block waves-light">
-      <img class="activator" src="http://materializecss.com/images/office.jpg">
-    </div>
-    
-    <!-- Movie title -->
-    <div class="card-content"> <!-- Movie title -->
-      <span class="card-title activator grey-text text-darken-4">
-        Movie Title
-        <i class="material-icons right">more_vert</i>
-      </span>
-    </div>
+  <div class="row">
+    <div class="col m4" ng-repeat="movie in orderedMovies = (movies | orderBy: ['-price'])">
+      <div class="card sticky-action">
+        <div class="card-image waves-effect waves-block waves-light">
+          <img class="activator" src="{{movie.image}}">
+        </div>
+        
+        <!-- Movie title -->
+        <div class="card-content">
+          <span class="card-title activator grey-text text-darken-4">
+            {{movie.title}}
+            <i class="material-icons right">more_vert</i>
+          </span>
+        </div>
 
-    <!-- Movie synopsis -->
-    <div class="card-reveal">
-      <span class="card-title grey-text text-darken-4">
-        Movie Title
-        <i class="material-icons right">close</i>
-      </span>
-      <p>A brief synopsis of the movie that paints a pictue of the plot. Useful when deciding whether to add a movie to your cart or not.</p>
-    </div>
+        <!-- Movie synopsis -->
+        <div class="card-reveal">
+          <span class="card-title grey-text text-darken-4">
+            {{movie.title}}
+            <i class="material-icons right">close</i>
+          </span>
+          <p>A brief synopsis of the movie that paints a pictue of the plot. Useful when deciding whether to add a movie to your cart or not.</p>
+        </div>
 
-    <!-- Price & add to basket -->
-    <div class="card-action">
-      <a class="waves-effect waves-light btn light-blue">
-        <i class="material-icons left">shopping_basket</i>
-        <span>£5.99</span>
-      </a>
+        <!-- Price & add to basket -->
+        <div class="card-action">
+          <a class="waves-effect waves-light btn light-blue">
+            <i class="material-icons left">shopping_basket</i>
+            <span>£{{movie.price}}</span>
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </div>
