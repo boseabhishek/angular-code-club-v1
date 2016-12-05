@@ -1,5 +1,5 @@
 var moviesApp = angular.module(
-  'movieapp', // Module name
+  'moviesApp', // Module name
   ['ngRoute', 'ngAnimate'] // Module dependency injection
 );
 
