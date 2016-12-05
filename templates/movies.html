@@ -35,7 +35,7 @@
 
     <!-- Price & add to basket -->
     <div class="card-action">
-      <a class="waves-effect waves-light btn light-blue">
+      <a class="waves-effect waves-light btn light-blue" ng-click="addMovieToBasket(movie)">
         <i class="material-icons left">shopping_basket</i>
         <span>{{ movie.price | currency : "£" }}</span>
       </a>

@@ -14,6 +14,9 @@ moviesApp.factory('basketFactory', function () {
     // Add a movie to the basket
     addMovie: function (movie) {
       movies[movie.id] = movie;
+
+      console.log('Added "' + movie.title + '" to basket.');
+      console.log(movies);
     },
 
     // Remove a movie from the basket

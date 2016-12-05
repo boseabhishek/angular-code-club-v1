@@ -1,4 +1,4 @@
-moviesApp.controller('moviesController', function ($scope, MoviesService) {
+moviesApp.controller('moviesController', function ($scope, basketFactory, MoviesService) {
   $scope.movies = [];
 
   // Load movies from the API using our service
@@ -16,6 +16,12 @@ moviesApp.controller('moviesController', function ($scope, MoviesService) {
       alert('Failed to load movies from the API.');
     }
   );
+
+  $scope.addMovieToBasket = function (movie) {
+    console.log('Adding movie to basket...');
+    
+    basketFactory.addMovie(movie);
+  };
 });
 
 moviesApp.controller('basketController', function () {
