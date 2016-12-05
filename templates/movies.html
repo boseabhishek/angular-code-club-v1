@@ -11,15 +11,15 @@
 <div class="container">
 
 <!-- Movie card -->
-  <div class="card medium sticky-action">
+  <div class="card medium sticky-action" ng-repeat="movie in movies">
     <div class="card-image waves-effect waves-block waves-light">
-      <img class="activator" src="http://materializecss.com/images/office.jpg">
+      <img class="activator" ng-src="{{ movie.image }}">
     </div>
 
     <!-- Movie title -->
     <div class="card-content"> <!-- Movie title -->
       <span class="card-title activator grey-text text-darken-4">
-        Movie Title
+        {{ movie.title }}
         <i class="material-icons right">more_vert</i>
       </span>
     </div>
@@ -27,17 +27,17 @@
     <!-- Movie synopsis -->
     <div class="card-reveal">
       <span class="card-title grey-text text-darken-4">
-        Movie Title
+        {{ movie.title }}
         <i class="material-icons right">close</i>
       </span>
-      <p>A brief synopsis of the movie that paints a pictue of the plot. Useful when deciding whether to add a movie to your cart or not.</p>
+      <p>{{ movie.synopsis }}</p>
     </div>
 
     <!-- Price & add to basket -->
     <div class="card-action">
       <a class="waves-effect waves-light btn light-blue">
         <i class="material-icons left">shopping_basket</i>
-        <span>£5.99</span>
+        <span>{{ movie.price | currency : "£" }}</span>
       </a>
     </div>
   </div>

@@ -1,15 +1,14 @@
-moviesApp.controller('moviesController', function (MoviesService) {
-  var movies = [];
+moviesApp.controller('moviesController', function ($scope, MoviesService) {
+  $scope.movies = [];
 
   // Load movies from the API using our service
   MoviesService.listMovies().then(
 
     // Success callback
     function (response) {
-      movies = response.data;
+      $scope.movies = response.data;
 
-      console.log(movies);
-      alert(movies.length + ' movies loaded from the API.');
+      console.log($scope.movies);
     },
 
     // Error callback

@@ -1,3 +1,7 @@
+.card + .card {
+  margin-top: 50px;
+}
+
 .card.medium {
   max-width: 500px;
   margin: 0 auto;
