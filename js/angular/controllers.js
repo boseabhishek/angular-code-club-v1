@@ -24,6 +24,24 @@ moviesApp.controller('moviesController', function ($scope, basketFactory, Movies
   };
 });
 
-moviesApp.controller('basketController', function () {
-  alert('Hello basket controller!');
+moviesApp.controller('basketController', function ($scope, basketFactory) {
+
+  // Initially populate the basket page with the basket contents
+  $scope.basket = basketFactory.getMovies();
+
+  // When clicking the remove button, remove the movie from the basket
+  $scope.removeMovieFromBasket = function (movie) {
+    basketFactory.removeMovie(movie);
+  };
+
+  // Calculate the total cost of all the movies in the basket
+  $scope.getMoviesTotal = function() {
+    var total = 0;
+
+    Object.keys($scope.basket).forEach(function (movieId) {
+      total += $scope.basket[movieId].price;
+    });
+
+    return total;
+  };
 });

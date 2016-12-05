@@ -17,23 +17,20 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>Movie Title 1</td>
-        <td>£5.99</td>
+
+      <!-- Each movie in the basket -->
+      <tr ng-repeat="(id, movie) in basket">
+        <td>{{ movie.title }}</td>
+        <td>{{ movie.price | currency : "£" }}</td>
         <td>
-          <a class="waves-effect waves-light btn light-blue">Remove</a>
+          <a class="waves-effect waves-light btn light-blue" ng-click="removeMovieFromBasket(movie)">Remove</a>
         </td>
       </tr>
-      <tr>
-        <td>Movie Title 2</td>
-        <td>£7.55</td>
-        <td>
-          <a class="waves-effect waves-light btn light-blue">Remove</a>
-        </td>
-      </tr>
+
+      <!-- Total basket price -->
       <tr class="total">
         <td>Total</td>
-        <td>£13.54</td>
+        <td>{{ getMoviesTotal() | currency : "£" }}</td>
         <td></td>
       </tr>
     </tbody>
