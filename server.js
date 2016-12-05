@@ -22,7 +22,7 @@ app.get('/movies.json', function (req, res) {
       id: 2,
       title: 'The Avengers',
       synopsis: '', image:
-      'the-avengers.jpg',
+      'http://178.62.0.124/images/the-avengers.jpg',
       price: 7.99,
     },
     {
