@@ -11,11 +11,13 @@ moviesApp.config([
 
       // Specific basket route
       .when('/basket', {
+        controller: 'basketController',
         templateUrl: 'templates/basket.html'
       })
 
       // By default, show the movies route
       .otherwise({
+        controller: 'moviesController',
         templateUrl: 'templates/movies.html'
       });
   }
